@@ -1,7 +1,7 @@
 FROM debian:stretch
 
 RUN apt-get update 
-RUN apt-get install -y wget libzip-dev apt-transport-https lsb-release ca-certificates git
+RUN apt-get install -y wget libzip-dev apt-transport-https lsb-release ca-certificates git nodejs npm
 RUN wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
 RUN echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main"> /etc/apt/sources.list.d/php.list
 RUN apt-get update
