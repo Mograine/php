@@ -2,6 +2,11 @@ FROM debian:stretch
 
 RUN apt-get update 
 RUN apt-get install -y wget libzip-dev apt-transport-https lsb-release ca-certificates git curl software-properties-common
+RUN sudo apt-get -y install libxpm4 libxrender1 libgtk2.0-0 libnss3 libgconf-2-4
+RUN sudo apt-get -y install chromium-browser
+RUN sudo apt-get -y install xvfb gtk2-engines-pixbuf
+RUN sudo apt-get -y install xfonts-cyrillic xfonts-100dpi xfonts-75dpi xfonts-base xfonts-scalable
+RUN sudo apt-get -y install imagemagick x11-apps
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get install -y nodejs
 RUN wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
